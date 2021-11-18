@@ -14,8 +14,8 @@ public class ApplianceServiceImpl implements ApplianceService{
     @Autowired
     private AppliancesRepository appliancesRepository;
 
-    @Autowired
-    private MongoTemplate mongoTemplate;
+//    @Autowired
+//    private MongoTemplate mongoTemplate;
 
     @Override
     public Appliance saveProduct(Appliance appliance) {
