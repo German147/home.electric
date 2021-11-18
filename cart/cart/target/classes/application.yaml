@@ -1,0 +1,33 @@
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream, info, health
+
+# Discovery Server Access
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+# HTTP Server
+server:
+  port: 3333   # HTTP (Tomcat) port
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/appliances
+    username: root
+    password: diosteama-9
+  jpa:
+    generate-ddl: true
+
+      #servicio.catalogo:
+      #ribbon:
+      # EnableZoneAffinity: true
+      # EnableZoneExclusive: false
+      # zoneAffinity:
+      # minAvailableServers: 1
+      # maxLoadPerServer: 0.8
+    # maxBlackOutServersPercentage: 0.6
